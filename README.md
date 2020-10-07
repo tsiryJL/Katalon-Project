@@ -1,2 +1,0 @@
-# Katalon-Project
-test

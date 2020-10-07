@@ -6,16 +6,16 @@
    <comment></comment>
    <testCaseGuid>8df8e3b9-937a-4007-8b37-e40c8ef22b48</testCaseGuid>
    <variable>
-      <defaultValue>55966258572</defaultValue>
+      <defaultValue>55966258211</defaultValue>
       <description></description>
-      <id>_RegisterAgent_WAR_utiba_agent_portlets__f1</id>
+      <id>a06a3ef2-ba38-4f30-8e84-b71fa246840b</id>
       <masked>false</masked>
       <name>IdRef</name>
    </variable>
    <variable>
-      <defaultValue>1234567890123450</defaultValue>
+      <defaultValue>55966258572</defaultValue>
       <description></description>
-      <id>_RegisterAgent_WAR_utiba_agent_portlets__f2</id>
+      <id>16df4ad6-e936-49be-80e1-b64fdf7ea1e5</id>
       <masked>false</masked>
       <name>legacyID</name>
    </variable>
