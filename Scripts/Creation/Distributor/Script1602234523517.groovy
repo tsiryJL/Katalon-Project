@@ -29,7 +29,7 @@ import java.util.regex.Pattern
 import static org.apache.commons.lang3.StringUtils.join
 
 //Declaration variable
-int RefID = 559662587775, ShortCode =1, DateOfBirth = 10/05/1995
+int RefID = 559662587781, ShortCode =1, DateOfBirth = 10/05/1995
 String FirstName = "testFirst", LastName = "testLas"
 
 WebUI.openBrowser('https://www.google.com/')
@@ -44,9 +44,15 @@ selenium.type("id=_58_password", "Utiba@123")
 selenium.click("class=btn btn-primary")
 WebUI.waitForPageLoad(100)
 
-//begin test
+//Begin test
 selenium.open("http://192.168.69.2:8180/portal/server/group/adminconsole/a/distributor/register")
 WebUI.waitForPageLoad(100)
+
+//vérification des champs obligatoire
+selenium.click("id=_RegisterAgent_WAR_utiba_agent_portlets_save")
+WebUI.waitForPageLoad(100)
+
+//Vérification saisie formulaire
 selenium.click("id=_RegisterAgent_WAR_utiba_agent_portlets__f1")
 selenium.type("id=_RegisterAgent_WAR_utiba_agent_portlets__f1", "${RefID}")
 selenium.click("id=_RegisterAgent_WAR_utiba_agent_portlets__f2")
@@ -67,13 +73,10 @@ selenium.select("id=_RegisterAgent_WAR_utiba_agent_portlets__f5", "label=KYC 0 (
 selenium.click("id=_RegisterAgent_WAR_utiba_agent_portlets__f5")
 selenium.click("id=_RegisterAgent_WAR_utiba_agent_portlets__f6")
 selenium.type("id=_RegisterAgent_WAR_utiba_agent_portlets__f6", "${FirstName}")
-
 selenium.type("id=_RegisterAgent_WAR_utiba_agent_portlets__f7", "Distributeur à 2 niveaux")
 selenium.click("id=_RegisterAgent_WAR_utiba_agent_portlets__f8")
 selenium.type("id=_RegisterAgent_WAR_utiba_agent_portlets__f8", "${LastName}")
 selenium.click("id=_RegisterAgent_WAR_utiba_agent_portlets__f10")
-
-//Use WebUI keyword
 selenium.type("id=_RegisterAgent_WAR_utiba_agent_portlets__f10", "12345678904123456789012345678901234567890123456789")
 selenium.click("id=location_search_panel")
 selenium.type("id=location_search_panel", "madagascar")
@@ -147,14 +150,17 @@ selenium.click("id=_RegisterAgent_WAR_utiba_agent_portlets__f56")
 selenium.click("id=_RegisterAgent_WAR_utiba_agent_portlets_save")
 WebUI.waitForPageLoad(20)
 println "CHECK-1"
+
+//Deuxième partie
 selenium.click("id=_RegisterAgent_WAR_utiba_agent_portlets__f56")
 selenium.select("id=_RegisterAgent_WAR_utiba_agent_portlets__f56", "label=No")
 selenium.click("id=_RegisterAgent_WAR_utiba_agent_portlets__f56")
 selenium.click("id=_RegisterAgent_WAR_utiba_agent_portlets__f1")
-
 selenium.click("id=_RegisterAgent_WAR_utiba_agent_portlets_save")
 WebUI.waitForPageLoad(20)
 println "CHECK-2"
+
+//Troisième partie
 selenium.click("id=_RegisterAgent_WAR_utiba_agent_portlets___f9")
 selenium.type("id=_RegisterAgent_WAR_utiba_agent_portlets___f9", "10/09/1580")
 selenium.click("id=content")
@@ -167,6 +173,8 @@ selenium.type("id=_RegisterAgent_WAR_utiba_agent_portlets__f15", "123454548479")
 selenium.click("id=_RegisterAgent_WAR_utiba_agent_portlets_save")
 WebUI.waitForPageLoad(20)
 println "CHECK-3"
+
+//Quatrième partie
 selenium.click("id=_RegisterAgent_WAR_utiba_agent_portlets___f9")
 selenium.type("id=_RegisterAgent_WAR_utiba_agent_portlets___f9", "${DateOfBirth}")
 selenium.click("id=content")
@@ -175,8 +183,9 @@ selenium.type("id=_RegisterAgent_WAR_utiba_agent_portlets__f2", "510123")
 selenium.click("id=_RegisterAgent_WAR_utiba_agent_portlets_save")
 WebUI.waitForPageLoad(20)
 println "CHECK-4"
-selenium.click("id=_RegisterAgent_WAR_utiba_agent_portlets___f9")
 
+//Cinquième partie
+selenium.click("id=_RegisterAgent_WAR_utiba_agent_portlets___f9")
 //Date of Birth
 selenium.type("id=_RegisterAgent_WAR_utiba_agent_portlets___f9", "10/09/1998")
 selenium.click("id=content")
