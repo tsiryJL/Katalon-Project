@@ -1,21 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <TestCaseEntity>
    <description>test saisie formulaire and create subscriber</description>
-   <name>Create Subscriber</name>
+   <name>Subscriber</name>
    <tag></tag>
    <comment></comment>
-   <testCaseGuid>8df8e3b9-937a-4007-8b37-e40c8ef22b48</testCaseGuid>
+   <testCaseGuid>a0424f78-d777-4920-b41b-6783434782eb</testCaseGuid>
    <variable>
       <defaultValue>55966258211</defaultValue>
       <description></description>
-      <id>a06a3ef2-ba38-4f30-8e84-b71fa246840b</id>
+      <id>4fe85441-c8e4-4446-ae5d-5d6033643223</id>
       <masked>false</masked>
       <name>IdRef</name>
    </variable>
    <variable>
       <defaultValue>55966258572</defaultValue>
       <description></description>
-      <id>16df4ad6-e936-49be-80e1-b64fdf7ea1e5</id>
+      <id>a0ce855d-0824-406c-975f-34d2ab5f59fc</id>
       <masked>false</masked>
       <name>legacyID</name>
    </variable>

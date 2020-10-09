@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>test saisie formulaire and create subscriber</description>
+   <name>Subscriber</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>8df8e3b9-937a-4007-8b37-e40c8ef22b48</testCaseGuid>
+</TestCaseEntity>
