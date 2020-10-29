@@ -29,8 +29,8 @@ import java.util.regex.Pattern
 import static org.apache.commons.lang3.StringUtils.join
 
 //Déclaration Variable
-int legacyID = 55966258661
-int IdRef = 55966258223
+int legacyID = 55966258665
+int IdRef = 55966258228
 
 //Test service internet
 WebUI.openBrowser('https://www.google.com/')
@@ -44,7 +44,7 @@ selenium.click("id=_58_login")
 selenium.type("id=_58_login", "70586665")
 selenium.type("id=_58_password", "Utiba@123")
 selenium.click("//button")
-WebUI.waitForPageLoad(20)
+WebUI.waitForPageLoad(200)
 
 
 	selenium.open("http://192.168.69.2:8180/portal/server/group/adminconsole/a/subscriber/register")
@@ -122,4 +122,5 @@ WebUI.waitForPageLoad(20)
 	selenium.click("id=_RegisterAgent_WAR_utiba_agent_portlets__f2")
 	selenium.type("id=_RegisterAgent_WAR_utiba_agent_portlets__f2", "2544845456545648")
 	selenium.click("id=_RegisterAgent_WAR_utiba_agent_portlets_save")
+	println "Already exist ID reference test OK"
 

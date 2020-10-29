@@ -28,14 +28,10 @@ import static org.junit.Assert.*
 import java.util.regex.Pattern
 import static org.apache.commons.lang3.StringUtils.join
 
-//Déclaration Variable
-int legacyID = 55966258661
-int IdRef = 55966258223
-
-//Test service internet
 WebUI.openBrowser('https://www.google.com/')
 def driver = DriverFactory.getWebDriver()
 String baseUrl = "https://www.google.com/"
+selenium = new WebDriverBackedSelenium(driver, baseUrl)
 
 //Test connexion portal Admin
 selenium = new WebDriverBackedSelenium(driver, baseUrl)
@@ -44,13 +40,19 @@ selenium.click("id=_58_login")
 selenium.type("id=_58_login", "70586665")
 selenium.type("id=_58_password", "Utiba@123")
 selenium.click("//button")
-WebUI.waitForPageLoad(20)
+WebUI.waitForPageLoad(200)
 
-selenium.open("http://192.168.69.2:8180/portal/server/group/adminconsole/a/staff/register")
-WebUI.waitForPageLoad(20)
-selenium.click("id=_RegisterAgent_WAR_utiba_agent_portlets_save")
-
-//vérification requiered file
-WebUI.executeJavaScript(baseUrl, null)
+selenium.open("http://192.168.69.2:8180/portal/server/group/adminconsole/home")
+selenium.click("//html")
+selenium.click("//input[@type='search']")
+selenium.type("id=yui_patched_v3_11_0_1_1603957973270_465", "131683380")
+selenium.click("link=131683380")
+selenium.click("link=Delete Subscriber")
+selenium.click("id=_DeleteAgent_WAR_utiba_agent_portlets_confirmAgentReference")
+selenium.type("id=_DeleteAgent_WAR_utiba_agent_portlets_confirmAgentReference", "c20")
+selenium.click("id=_DeleteAgent_WAR_utiba_agent_portlets_delete")
+selenium.click("id=_DeleteAgent_WAR_utiba_agent_portlets_confirmAgentReference")
+selenium.type("id=_DeleteAgent_WAR_utiba_agent_portlets_confirmAgentReference", "c233")
+selenium.click("id=_DeleteAgent_WAR_utiba_agent_portlets_delete")
 
 

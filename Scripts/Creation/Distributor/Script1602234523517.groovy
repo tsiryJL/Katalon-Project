@@ -29,8 +29,8 @@ import java.util.regex.Pattern
 import static org.apache.commons.lang3.StringUtils.join
 
 //Declaration variable
-int RefID = 559662587781, ShortCode =1, DateOfBirth = 10/05/1995
-String FirstName = "testFirst", LastName = "testLas"
+int RefID = 559662587785, ShortCode =1, DateOfBirth = 11/05/1995
+String FirstName = "testFirst2", LastName = "testLas2"
 
 WebUI.openBrowser('https://www.google.com/')
 def driver = DriverFactory.getWebDriver()
